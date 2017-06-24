@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Present Value of a Lease with Residual Value">
+	<scenario>
+		<![CDATA[
+			<p>
+            	The Hobocus Company wants to purchase a machine currently leased from your company. You offer to sell it for the present value of the lease discounted at an annual interest rate of 20% compounded monthly. The machine has a residual value of $8,000 with 36 monthly payments of $1,500 remaining on the lease. If the payments are due at the beginning of each month, how much should you charge for the machine?
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Press the <strong>BGN</strong> button to set beginning-of-period payments.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>36</strong>), and then press the <strong>N</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>20/12</strong>), and then press the <strong class="bolder">=</strong> button followed by the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Enter the residual value of the asset (in this case <strong>8000</strong>), and then press the <strong>+/-</strong> button followed by the <strong>FV</strong> button.</p>
+		]]>
+	</step>
+	<step shift="none" id="6">
+		<![CDATA[
+			<p>Enter the periodic payment (in this case <strong>1500</strong>), and then press the <strong>+/-</strong> button followed by the <strong>PMT</strong> button.</p>
+		]]>
+	</step>
+	<step shift="none" id="7">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>PV</strong> button to solve for the present value of the lease payment. </p>
+		]]>
+	</step>
+</tutorial>

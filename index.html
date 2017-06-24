@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=768, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>FinCalc Tutorial</title>
+<link href="app/css/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+
+</head>
+
+<body role="application">
+<script type="text/javascript" src="app/js/mobileConsole.1.js"></script>
+<script type="text/javascript" src="app/js/lib/jquery.browser.js"></script>
+<script type="text/javascript" src="app/js/lib/handlebars.js"></script>
+<script type="text/javascript" src="app/js/fincalc.init.js"></script>
+<script type="text/javascript" src="app/js/fincalc.ui.js?i=00"></script>
+<script type="text/javascript" src="app/js/fincalc.events.js"></script>
+<div id="container">
+	<div id="landscapeMode">
+        <div>Please rotate to portrait mode.</div>
+    </div>
+    <div id="header">
+    	<div id="calc-button">
+        	<a tabindex="1"
+                aria-label="My Finance Lab Calculator"
+                title="My Finance Lab Calculator"
+                tabaction="location.href='http://staging.allthingsmedia.com/pearson/CFO/calculator/calc.htm'"
+                href='http://staging.allthingsmedia.com/pearson/CFO/calculator/calc.htm'></a>
+        </div>
+        <div id="calc-title" tabindex="2">
+			        
+        </div>
+        <div id="calc-listing-button">
+            <a href='toc.html'
+                aria-label="My Finance Lab Calculator Tutorials Table of Contents"
+                title="My Finance Lab Calculator Tutorials Table of Contents"
+                tabaction="location.href='toc.html'"
+                tabindex="3"></a></div>
+    </div>
+    <div id="content-container">
+            <div id="content" class="forceHide">
+
+            <img src="" id="poster" />
+
+
+        </div>
+        <div class="slideScroll">
+            <div id="menuToggle"
+                 tabindex="12"
+                 aria-label="Toggle Slideout Menu"
+                 onclick="fincalc.ui.toggleSlideout()"><div></div></div>
+            <div id="slideScrollBar"></div>
+        </div>
+        <div id="slideMenu">
+            <div id="smContent">
+            <div class="steps" role="navigation">
+                <h2 onclick="fincalc.ui.gotoStep(0)">Scenario</h2>
+                <p>If John invests $1,850 today in an asset earning a 10% rate of return (compounded annually), how much will he have after two years? </p>
+
+                <h2 onclick="fincalc.ui.gotoStep(1)">Step 1</h2>
+                <p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+
+                <h2 onclick="fincalc.ui.gotoStep(2)">Step 2</h2>
+                <p>Enter the present cash outflow (in this case <strong>1850</strong>), and then press the <strong>+/-</strong> button followed by the <strong>PV</strong> button. </p>
+
+                <h2 onclick="fincalc.ui.gotoStep(3)">Step 3</h2>
+                <p>Enter the periodic interest rate (in this case <strong>10</strong> percent), and then press the <strong>I/Y</strong> button.</p>
+
+                <h2 onclick="fincalc.ui.gotoStep(4)">Step 4</h2>
+                <p>Enter the number of time periods (in this case <strong>2</strong>), and then press the <strong>N</strong> button.</p>
+
+                <h2 onclick="fincalc.ui.gotoStep(5)">Step 5</h2>
+                <p>Press the <strong>CPT</strong> button and then the <strong>FV</strong> button to solve for the future value of the lump sum.</p>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+    	<div id="controls">
+        	<div id="audio-controls">
+            	<a onclick="fincalc.ui.mediaControls.muteFunc()" tabindex="11">mute</a>
+            </div>
+            <div id="navigation">
+            	<a onclick="fincalc.events.previousStep()"
+                    class="prev" tabindex="8">previous step</a>
+                <span class="step" tabindex="4"></span>
+            	<a onclick="fincalc.events.nextStep()"
+                    class="next" tabindex="9">next step</a>
+            </div>
+            <div id="replay-control">
+            	<a onclick="fincalc.ui.mediaControls.replayFunc()" tabindex="10">replay</a>
+            </div>
+        </div>
+        <div id="instructions">
+        	
+        </div>
+    </div>
+    
+</div>
+
+<script id="header-title" type="text/x-handlebars-template">
+	<h1>{{{title}}}</h1>
+</script>
+
+<!-- <script id="scenario" type="text/x-handlebars-template">
+	<div id="scenario-title">
+		<h2>Scenario</h2>
+	</div>
+	<div id="scenario-instruction" tabindex="6">
+		{{{content}}}
+	</div>
+</script> -->
+<script id="scenario" type="text/x-handlebars-template">
+    <div id="scenario-title">
+        <h2>Scenario</h2>
+    </div>
+    <div id="scenario-instruction">
+        {{{content}}}
+    </div>
+</script>
+
+<script id="instruction" type="text/x-handlebars-template">
+	{{{instruction}}}
+</script>
+<div id="imgCache" style="height:0px;width:0;overflow: hidden;">
+</div>
+</body>
+</html>

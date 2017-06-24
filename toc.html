@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=768, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<title>FinCalc TOC</title>
+<link href="app/css/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="app/js/lib/jquery.browser.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+	<div id="landscapeMode">
+        <div>Please rotate to portrait mode.</div>
+    </div>
+    <div id="header">
+        <div id="calc-button">
+            <a href="calc.htm" tabaction="location.href='calc.htm'" title="My Finance Lab Calculator" aria-label="My Finance Lab Calculator" tabindex="1"></a>
+        </div>
+        <div tabindex="2" id="calc-title">
+        <h1>MyFinanceLab Financial<br>Calculator Tutorials</h1>
+    </div>
+        <div id="calc-listing-button">
+            <a tabindex="3" tabaction="location.href='toc.html'" title="My Finance Lab Calculator Tutorials Table of Contents" aria-label="My Finance Lab Calculator Tutorials Table of Contents" href="toc.html"></a></div>
+    </div>
+    <div id="content-container" class="scenario" style="padding-bottom:0">
+        
+    	<div class="tocList">
+        <div>
+            <a href="index.html?tut=1" tabindex="5">Tutorial 1:  <span>Learning the General TVM Buttons</span></a>
+            <a href="index.html?tut=2" tabindex="6">Tutorial 2:  <span>Future Value of a Lump Sum<br>(Annual Compounding)</span></a>
+            <a href="index.html?tut=3" tabindex="7">Tutorial 3:  <span>Future Value of an Annuity</span></a>
+            <a href="index.html?tut=4" tabindex="8">Tutorial 4:  <span>Present Value of a Lump Sum<br>(Annual Compounding)</span></a>
+            <a href="index.html?tut=5" tabindex="9">Tutorial 5:  <span>Present Value of a Lump Sum<br>(Monthly Compounding)</span></a>
+            <a href="index.html?tut=6" tabindex="10">Tutorial 6:  <span>Present Value of an Annuity</span></a>
+            <a href="index.html?tut=7" tabindex="11">Tutorial 7:  <span>Present Value of a Lease with Residual Value</span></a>
+            <a href="index.html?tut=8" tabindex="12">Tutorial 8:  <span>Bond Valuation (Semiannual Interest)</span></a>
+        </div>
+        <div>
+            <a href="index.html?tut=9" tabindex="13">Tutorial 9:  <span>Yield to Call of a Bond</span></a>
+            <a href="index.html?tut=10" tabindex="14">Tutorial 10: <span>Yield to Maturity of a Bond</span></a>
+            <a href="index.html?tut=11" tabindex="15">Tutorial 11: <span>Internal Rate of Return (IRR) of a Series of Cash Flows</span></a>
+            <a href="index.html?tut=12" tabindex="16">Tutorial 12: <span>Net Present Value (NPV) of a Series of Uneven Cash Flows</span></a>
+            <a href="index.html?tut=13" tabindex="17">Tutorial 13: <span>Loan Payments<br>(Monthly Compounding)</span></a>
+            <a href="index.html?tut=14" tabindex="18">Tutorial 14: <span>Mortgage Payments and Amortization Schedule</span></a>
+            <a href="index.html?tut=15" tabindex="19">Tutorial 15: <span>Computing Payment, Interest and Loan Balance after a Specific Payment</span></a>
+        </div>
+        </div>
+    </div>
+    <div id="footer" style="height:201px;max-height:201px:position:fixed;bottom:0">
+    	 
+    </div>
+    
+</div>
+
+<script>
+var device;
+if (navigator.userAgent.match(/tablet/i)) {
+    device = "tablet";
+} else if (navigator.userAgent.match(/ipad/i)) {
+    device = "iPad";
+} else if (navigator.userAgent.match(/iphone/i)){
+    device = "iPhone";
+} else if (navigator.userAgent.match(/mobile/i)) {
+    device = "phone";
+} else if (navigator.userAgent.match(/android/i)) {
+    device = "tablet";
+} else {
+    device = "desktop";
+}
+document.body.className = device;
+if(device.toLowerCase().indexOf("phone") !== -1) {
+    document.body.style.height = "1470px";
+} else {
+    document.body.style.height = "929px";
+}
+$(".tocList a").each(function(){this.setAttribute("aria-label",this.textContent)})
+</script>
+
+</body>
+</html>

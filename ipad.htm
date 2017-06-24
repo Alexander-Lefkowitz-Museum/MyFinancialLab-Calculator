@@ -1,0 +1,329 @@
+<!doctype html><head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="initial-scale = 2.0, maximum-scale = 2.0,user-scalable = no">
+   <title>Financial Calculator</title>
+  <link rel="stylesheet" href="css/calc.css" >
+  <link rel="stylesheet" href="css/footer.css" >
+</head>
+<style>
+body {
+  background-color:#333333;
+}
+  .keypad b {
+    margin-top: 8px;
+  }
+
+  .numpad i {
+  margin-top:8px;
+  }
+
+.content {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.display .r {
+  padding-top:2px;
+}
+.variables dl {
+    font-size: 12px;
+}
+.table span {
+    min-height: 93px;
+    padding: 2px;
+}
+.FCalc {
+padding-bottom:0;
+}
+.timeline span {
+    min-height: 80px;
+}
+</style>
+
+<div id="SystemMessage" class="SystemMessage"></div>
+
+<div id="FCalc" class="FCalc" style="margin: 0">
+
+<div class="content">
+  
+
+  <div class="timeline" role="region" aria-label="Time Line">
+
+    <span>
+
+      <div class="graph">
+
+        <div class="line">
+          <div class="fill">
+            <div class="dash"></div>
+          </div>
+        </div>
+        
+        <table cellpadding="0" cellspacing="0" summary="">
+          <tr class="r1"></tr>
+          <tr class="r2"></tr>
+          <tr class="r3"></tr>
+        </table>
+
+        <ol>
+          <li class="bb"></li>
+          <li class="eb"></li>
+        </ol>
+
+      </div>      
+
+    </span>
+
+    <div class="title">Time Line</div>
+
+  </div><!-- .timeline -->
+
+
+
+  <div class="table">
+
+    <span class="variables" role="region" aria-label="Values">
+      <dl>
+        <dt>Number of periods (N) =</dt>
+        <dd class="slim"></dd>
+        <dt>Interest per year (I/Y) =</dt>
+        <dd class="slim"></dd>
+        <dt>Present value (PV) =</dt>
+        <dd class="slim"></dd>
+        <dt>Payment (PMT) =</dt>
+        <dd class="slim"></dd>
+        <dt>Future value (FV) =</dt>
+        <dd class="slim"></dd>
+      </dl>
+      <div class="sm">
+        <dl>
+          <dt>Compounding (C/Y) =</dt>
+          <dd></dd>
+          <dt>Payments (P/Y) =</dt>
+          <dd></dd>
+          <dt>Period begin / end =</dt>
+          <dd></dd>
+        </dl>
+      </div>
+    </span>
+
+    <span class="amort">
+    
+       <div class="x">
+
+        <div class="top">
+          <table cellspacing="0"><tbody><!-- --></tbody></table>        
+        </div>
+
+        <div class="bot">
+          <ol>
+            <li>Period</li>
+            <li>Balance</li>
+            <li>Principle</li>
+            <li>Interest</li>   
+          </ol>
+        </div>    
+              
+      </div>
+      
+      <div class="y">
+        <div class="up" data-lang="up"></div>
+        <div class="down" data-lang="down"></div>
+      </div>
+
+      <div class="title">Amort</div>
+
+    </span>
+
+
+    <span class="cashflow">
+
+       <div class="x">        
+          
+        <div class="top">
+          <table cellspacing="0"><tbody><!-- --></tbody></table>                  
+       </div>
+        
+        <div class="bot">
+          <ol>
+            <li>Period</li>
+            <li>Cash Flow</li>
+          </ol>
+        </div>        
+
+       </div>
+
+      <div class="y">
+        <div class="up" data-lang="up"></div>
+        <div class="down" data-lang="down"></div>
+      </div>
+
+      <div class="z">
+
+        <ul><li class="a1">Interest</li><li class="b">=</li><li class="c"></li></ul>
+        <ul><li class="a">NPV</li><li class="b">=</li><li class="c"></li></ul>
+        <ul><li class="a">IRR</li><li class="b">=</li><li class="c"></li></ul>
+        
+      </div>
+
+      <div class="title">Cash Flow</div>
+
+    </span>
+
+
+  </div><!-- .table -->
+
+
+
+  <div class="display" role="region" aria-label="Display">
+
+    <ol>
+      <li class="l"></li>
+      <li class="r" aria-live="polite"></li>
+    </ol>
+
+  </div><!-- .display -->
+
+
+  <div class="keypad" role="region" aria-label="Buttons">
+  
+    <table cellpadding="0" cellspacing="0" class="buttontable">
+      <tr>
+        <td><b><button class="cpt" tabindex="1">compute</button><abbr>Q</abbr></b></td>
+        <td><b><button class="rcl" tabindex="2">recall</button><abbr>W</abbr></b></td>
+        <td><b><button class="enter" tabindex="3">enter</button></b></td>
+        <td><b><button class="up" tabindex="4">up</button></b></td>
+        <td><b><button class="down" tabindex="5">down</button></b></td>                
+      </tr>
+      <tr>
+        <td><b><button class="cf" tabindex="6">cash flow mode</button><abbr>E</abbr></b></td>
+        <td><b class="var cf" data-lang="cf"><button class="npv" tabindex="7" data-lang="8">net present value</button><abbr>R</abbr></b></td>
+        <td><b class="var cf" data-lang="cf"><button class="irr" tabindex="8" data-lang="9">internal rate of return</button><abbr>T</abbr></b></td>
+        <td><b><button class="del" tabindex="9">delete</button></b></td>
+        <td><b><button class="ins" tabindex="10">insert</button></b></td>
+      </tr>
+      <tr class="tvm">
+        <td><b class="var"><button class="n" tabindex="11" data-lang="0">number of periods</button><abbr>Y</abbr></b></td>
+        <td><b class="var" data-lang="all"><button class="iy" tabindex="12" data-lang="1">interest rate per year</button><abbr>U</abbr></b></td>
+        <td><b class="var"><button class="pv" tabindex="13" data-lang="2">present value</button><abbr>I</abbr></b></td>
+        <td><b class="var"><button class="pmt" tabindex="14" data-lang="3">payment</button><abbr>O</abbr></b></td>
+        <td><b class="var"><button class="fv" tabindex="15" data-lang="4">future value</button><abbr>P</abbr></b></td>                        
+      </tr>
+      <tr>
+        <td><b class="var"><button class="cy" tabindex="16" data-lang="5">compounding periods per year</button><abbr>A</abbr></b></td>
+        <td><b class="var"><button class="py" tabindex="17" data-lang="6">payments per year</button><abbr>S</abbr></b></td>
+        <td><b><button class="xpy" tabindex="18">calculate the value for N using number of years and payments per year value</button><abbr>D</abbr></b></td>
+        <td><b><button class="bgn" tabindex="19">cash flow at beginning of the time period</button><abbr>F</abbr></b></td>
+        <td><b><button class="amort" tabindex="20">amortization mode</button><abbr>G</abbr></b></td>                        
+      </tr>
+      <tr>
+        <td><b><button class="recip" tabindex="21">reciprocal</button><abbr>H</abbr></b></td>
+        <td class="numpad" rowspan="5" colspan="5" valign="top">
+          <ul>
+            <li><i data-lang="7"><button tabindex="22" class="n_7">7</button></i></li>
+            <li><i data-lang="8"><button tabindex="23" class="n_8">8</button></i></li>
+            <li><i data-lang="9"><button tabindex="24" class="n_9">9</button></i></li>
+            <li><i data-lang="/"><button tabindex="25" class="op_div">divide</button></i></li>
+          </ul>
+          <ul>
+            <li><i data-lang="4"><button tabindex="27" class="n_4">4</button></i></li>
+            <li><i data-lang="5"><button tabindex="28" class="n_5">5</button></i></li>
+            <li><i data-lang="6"><button tabindex="29" class="n_6">6</button></i></li>
+            <li><i data-lang="*"><button tabindex="30" class="op_mult">multiply</button></i></li>
+          </ul>
+          <ul>
+            <li><i data-lang="1"><button tabindex="32" class="n_1">1</button></i></li>
+            <li><i data-lang="2"><button tabindex="33" class="n_2">2</button></i></li>
+            <li><i data-lang="3"><button tabindex="34" class="n_3">3</button></i></li>
+            <li><i data-lang="-"><button tabindex="35" class="op_sub">subtract</button></i></li>
+          </ul>
+          <ul>
+            <li><i data-lang="0"><button tabindex="37" class="n_0">0</button></i></li>
+            <li><i data-lang="."><button tabindex="38" class="n_dec">decimal</button></i></li>
+            <li><i data-lang="="><button tabindex="39" class="op_eq">equals</button></i></li>
+            <li><i data-lang="+"><button tabindex="40" class="op_add">add</button></i></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><b><button tabindex="26" class="yx">exponent</button><abbr>J</abbr></b></td>
+      </tr>
+      <tr>
+        <td><b><button tabindex="31" class="ce">clear</button></b></td>
+      </tr>
+      <tr>
+        <td><b><button tabindex="36" class="reset">reset</button></b></td>
+      </tr>
+      <tr>
+        <td><b><button tabindex="41" class="sign">sign</button><abbr>Z</abbr></b></td>
+      </tr>
+<!--
+      <tr>
+        <td></td>
+        <td colspan="4">
+          <ol class="toggles">
+            <li><span><button tabindex="42" id="hideTable"></button></span><label for="hideTable">Hide Table</label></li>
+            <li><span><button tabindex="43" id="hideTimeLine"></button></span><label for="hideTimeLine">Hide Time Line</label></li>
+          </ol>
+        </td>    
+      </tr>-->
+    
+    </table>
+  
+  </div> <!-- .keypad -->
+
+
+</div> 
+
+<!--<div class="copyright"><a target="_blank" href="http://www.pearson.com/"><img alt="" src="http://media.pearsoncmg.com/ph/bp/bp_mylabs/ccng_icons/mfl/pearson_logo.gif" style="border-width: 0px; border-style: solid;" /></a> Copyright &copy; 1995 -
+<script type="text/javascript">
+
+var currentTime = new Date()
+var year = currentTime.getFullYear()
+document.write(year)
+//
+</script>
+. All rights reserved.
+<a target="_blank" href="http://www.pearsoned.com/legal/">Legal Notice</a> | <a target="_blank" href="http://www.pearsoned.com/legal/privacy.htm">Privacy Policy</a> | <a target="_blank" href="http://www.pearsoned.com/legal/permissions.htm">Permissions</a></div>-->
+</div><!-- .content --><!-- .content -->
+
+<!--
+<div class="accessibility">
+	<a href="javascript:void(0)" alt="Press [ F2 ] Toggle Accesibility Keyboard">Press <b>[ F2 ]</b> Toggle Accesibility Keyboard</a>
+	<dl class="txt">
+  	<dt>DEL =</dt><dd>[ Backspace ]</dd>
+  	<dt>INS =</dt><dd>[ SpaceBar ]</dd>
+  	<dt>C/CE =</dt><dd>[ Delete ]</dd>
+   	<dt>RESET =</dt><dd>[ Esc ]</dd>
+	</dl>
+</div>
+-->
+
+</div> <!-- .FCalc -->
+
+<script>window.jQuery || document.write('<script src="lib/jquery-1.8.2.min.js"><\/script>')</script>
+
+<script src="js/utils.js"></script>
+<script src="js/device.js"></script>
+<script src="js/formula.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/amortization.js"></script>
+<script src="js/cashflow.js"></script>
+<script src="js/events.js"></script>
+<script src="js/loader.js"></script>
+
+<!--
+
+<script src="js/calc-min.js"></script>
+
+-->
+
+<!--
+
+DOS Command
+-------------
+copy/b utils.js + device.js + formula.js + ui.js + keys.js + amortization.js + cashflow.js + events.js + loader.js  calc.js
+
+-->

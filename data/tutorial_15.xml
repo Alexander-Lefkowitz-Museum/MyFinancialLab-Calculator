@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="&lt;span style=&apos;font-size:0.85em&apos;&gt;Computing Payment, Interest, and Loan Balance After a Specified Payment&lt;/span&gt;">
+	<scenario>
+		<![CDATA[
+			<p>
+				A group of sellers considers financing the sale price of a property for $200,000 at 6% annual interest, amortized over 30-year term with a balloon payment due after five years. They want to know:
+            </p>
+            <ul>
+				<li>Amount of the monthly payment</li>
+				<li>Amount of interest they will receive</li>
+				<li>Remaining balance at the end of the term (i.e., the balloon payment)</li>
+			</ul>
+            <div id="tapToContinue"  tabindex="7">
+		        <h2>Play
+		        <span> </span></h2>
+		    </div>
+            
+		]]>
+	</scenario>
+	<part>
+		<![CDATA[
+			<p><strong>Part 1.</strong> Compute the monthly payment.</p>
+		]]>	
+	</part>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>360</strong>, since the loan is for <strong>30</strong> years), and then press the <strong>N</strong> button.</p>
+			
+
+		]]>		
+	</step>
+
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>6/12</strong>, since payments are made on a monthly basis), and then press the <strong class="bolder">=</strong> button followed by the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the loan amount (in this case <strong>200000</strong>), and then press the <strong>PV</strong> button. </p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>PMT</strong> button to solve for the monthly payment. </p>
+		]]>		
+	</step>
+
+	<part step="6">
+		<![CDATA[
+			<p><strong>Part 2.</strong> Generate an amortization schedule for the interest and balloon payment.</p>
+		]]>	
+	</part>
+	<step shift="none" id="6">
+		<![CDATA[
+			<p>Press the <strong>AMORT</strong> button to access the amortization worksheet.</p>
+		]]>		
+	</step>	
+	<step shift="none" id="7" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter <strong>60</strong> (since the balloon payment is due after five years), and then press the <strong>ENTER</strong> button to set the ending period to 60.</p>
+		]]>
+	</step>
+	<step shift="none" id="8" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the balance after five years (the balloon payment).</p>
+		]]>		
+	</step>
+	<step shift="none" id="9">
+		<![CDATA[
+			<p>Press <strong>↓↓</strong> to display the interest paid after five years.</p>
+		]]>		
+	</step>
+</tutorial>

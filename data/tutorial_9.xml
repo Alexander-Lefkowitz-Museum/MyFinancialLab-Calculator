@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Yield to Call of a Bond">
+	<scenario>
+		<![CDATA[
+			<p>
+            	IBM has just issued a callable (at its $100 par value) five-year, 8% coupon bond with annual coupon payments. The bond can be called at par in one year or anytime thereafter on a coupon payment date. It has a price of $103 per $100 face value, implying a yield to maturity of 7.26%.  Calculate the yield to call of the bond.
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>1</strong> for 1 year), and then press the <strong>N</strong> button. If the bond was called after two years, you would simply use 2 instead of 1.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the dollar coupon payment per period (in this case <strong>8</strong>), and then press the <strong>PMT</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the price you would receive when the bond is called (in this case <strong>100</strong> for the 100 dollar face value), and then press the <strong>FV</strong> button. </p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Enter the present value or price of the bond (in this case <strong>103</strong>), and then press the <strong>+/-</strong>  button followed by the <strong>PV</strong> button. This amount represents the amount that the bondholder paid for the bond.</p>
+		]]>
+	</step>
+	<step shift="none" id="6">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button, and then the <strong>I/Y</strong> button to solve for the yield to call of the bond. </p>
+		]]>
+	</step>
+</tutorial>

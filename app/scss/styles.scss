@@ -1,0 +1,572 @@
+$textcolor:#fff;
+$textcolor2:#575757;
+@import 'reset';
+
+@mixin background($w,$h){
+	background:url(../ui/ui-buttons.png) no-repeat $w $h;
+}
+[onclick] {cursor:pointer}
+.forceHide {display:none !important}
+strong {font-weight:bold !important}
+.noTop {bottom:0 !important};
+.vidWrap {
+	
+}
+video {height:100%;}
+.bolder {     font-size: larger;line-height: 15px;}
+body {min-height:722px !important;}
+#landscapeMode {
+    background-color: black;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+	div {
+	    color: white;
+	    display: inline-block;
+	    font-size: 32px;
+	    margin: 100px auto 0;
+	}
+}
+#tapToContinue, #continueToPartB {
+	display:none;
+	padding:30px;
+	text-align:center;
+	cursor:pointer;
+	h2 {
+		font-size: 22px;
+	    font-weight: bold;
+	}
+	h2>span {
+		background: url("../ui/ui-buttons.png") no-repeat scroll -81px 0 transparent;
+  		display: inline-block;
+  		height: 32px;
+  		width: 22px;
+  		vertical-align: middle;
+	}
+}
+#continueToPartB {display:block;}
+#container
+{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 768px;
+    min-height: 722px;
+    min-width: 768px;
+    overflow: hidden;
+    position: relative;
+	#header {
+		background:#354293;
+		height:85px;
+		display:table;
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:1000;
+		#calc-button{
+			padding:16px 18px;
+			border-right:1px solid #9ba2cb;
+			float:left;
+			display:inline-block;
+			a {		
+				height:53px;
+				width:53px;
+				display:block;
+				@include background(0, -135px)
+			}
+		}
+		#calc-title{
+			float: left;
+			margin-top: 18px;
+			display:table-cell;
+			position:relative;
+			vertical-align:middle;
+			h1{
+				font-weight:bold;
+				color:$textcolor;
+				width:485px;
+				margin:0px 50px;
+				font-size:1.563em;
+				display:inline-block;
+				font-weight: bold;
+				text-align:center;
+				vertical-align:top;
+				//overflow: hidden;
+				//height: 28px;
+			}
+			/*&:after{
+				content:"...";
+				margin:0 0 0;
+				padding:0;
+				font-size:1.563em;
+				font-weight:bold;
+				color:$textcolor;
+				position:absolute;
+				top: 28px;
+       			right: 110px; 
+			}*/
+		}
+		#calc-listing-button{
+			//float:right;
+			display:inline-block;
+			padding:20px 8px;
+			font-size:0;
+			
+			a{	
+				font-size:0;
+				height:45px;
+				width:54px;
+				display:block;
+				@include background(-55px, -135px)
+			}
+			
+		}
+		
+		&:after{ 
+			visibility:hidden;
+			content:".";
+			clear:both;
+		}
+	}
+	
+	#content-container{
+		background:#fbf5ea;
+	    bottom: 152px;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 86px;
+	    width: 100%;
+	    z-index:609;
+		.sceneImage {
+			margin:-10px 0 0 -24px;
+		}
+		.tocList {
+			max-height:auto !important;
+			a {
+				color:#000;
+				text-decoration:none;
+				font-weight:bold;
+				margin:5px 0 18px 0;
+				display: inline-block;
+				height: 37px;
+			}
+			a>span {
+				display: block;
+				font-weight:normal;
+				font-size:smaller;
+			}
+			a:hover{
+				color:#444;
+			}
+		}
+		.slideScroll {
+			#slideScrollBar {
+			    background-color: #444444;
+			    border-radius: 7px 7px 7px 7px;
+			    height: 50px;
+			    left: 25%;
+			    margin: 6px 0;
+			    padding: 10px 0;
+			    position: relative;
+			    top: 0;
+			    width: 50%;
+			}
+		    background-color: #E6E5E6;
+		    border-radius: 7px 7px 7px 7px;
+		    bottom: 10px;
+		    left: -24px;
+		    position: absolute;
+		    top: 10px;
+		    width: 12px;
+		    z-index: 607;
+		    #menuToggle {
+			    background-color: transparent;
+			    cursor: pointer;
+			    position: absolute;
+			    right: -68px;
+			    top: 49%;
+			    z-index: 608;
+			    border-color: transparent;
+				border-style: solid;
+				border-width: 25px 25px 25px 8px;
+				div {
+					background-image: url("../ui/menuTog.png");
+					height: 29px;
+					width: 34px;
+					font-size: 0;
+				}
+			}
+		}
+		#slideMenu {
+		    background-color: #444444;
+		    box-shadow: 2px 0 4px black;
+		    color: #E5E5E5;
+		    overflow:hidden;
+		    width: 0%;
+		    z-index: 600;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    top: 0;
+
+			p {
+			    line-height: 19px;
+			    margin: 0 40px 30px 12px;
+			    font-size:18px;
+			}
+			h2 {
+				font-size: 23px;
+				font-weight: bold;
+				margin: 9px 93px 4px 12px;
+			}
+			#smContent {
+			    height: 100%;
+			    overflow-y: scroll;
+			    padding-right: 28px;
+			    width: 100%;
+			    display:none;
+			    ol,ul {
+			    	padding: 0 40px;
+			    	margin:-18px 18px 0 12px;
+			        font-size: 18px !important;
+				    line-height: 19px !important;
+			    }
+			    ol>li {
+			     list-style: decimal outside none;
+			    }
+			    ul>li {
+			     list-style: disc outside none;
+			    }
+			}
+		}
+		&.step{
+
+			#content{
+				&.shiftContent {
+					text-align:right;
+					 margin-right: 20px;
+					.vidWrap {text-align:right}
+				}
+				overflow:hidden;
+  				height: 100%;
+    			margin:20px auto;	
+				padding:0;
+				text-align:center;
+				.vidWrap, #poster{
+					height: 90%;
+					border:none;
+					max-height:670px;
+				}
+				#poster{
+				    z-index: 510;
+				    top: -14px;
+				    position:relative;
+				    border-top: 2px solid #FBF5EA !important;
+				    margin:-90% 0 0 0 !important;
+				    max-width:100%;
+				    width:auto;
+				    }
+				.vidWrap {
+					margin:10px auto 0;
+					position:relative;
+					.mask1 {
+						position:absolute;
+						left:0;
+						right:0;
+						height:2px;
+						background-color:#FBF5EA;
+						top:-1px;
+					}
+					.mask2 {
+						position:absolute;
+						left:0;
+						right:0;
+						height:2px;
+						background-color:#FBF5EA;
+						bottom: -1px;
+					}
+					.mask3 {
+						position:absolute;
+						left:0;
+						right:0;
+						width:2px;
+						background-color:#FBF5EA;
+						top:-1px;
+						bottom:-1px;
+					}
+					.mask4 {
+						position:absolute;
+						left:0;
+						right:0;
+						width:2px;
+						background-color:#FBF5EA;
+						top:-1px;
+						bottom:-1px;
+					}
+				}
+			}
+		}
+		&.scenario{
+			padding:32px 0;
+			ol,ul {
+				padding:0 40px
+			}
+			#scenario-instruction{
+				ol li{
+					list-style: decimal outside none;
+			    	color: #575757;
+				    font-size: 1.375em;
+				}
+				ul li{
+					list-style:disc outside none;
+			    	color: #575757;
+				    font-size: 1.375em;	
+				}
+			}
+			#poster {
+				display:none !important;
+			}
+			.tocList {
+				width:590px;
+				margin:0 auto;
+				border:2px solid #bdb9b2;
+				background:#fff;
+				padding:45px;
+				div {
+					display:inline-block;
+					vertical-align:top;
+					width:49.0%
+				}
+			}
+			#content{
+			    border: 2px solid #BDB9B2;
+			    bottom: 30px;
+			    margin: 0 40px;
+			    min-height: 200px;
+			    padding: 45px;
+			    position: absolute;
+			    top: 30px;
+			    width: 78%;
+				#audio{
+					display:none;
+				}
+				audio {
+					display:none !important;
+				}
+				#scenario-title{
+					h2{
+						color:$textcolor2;
+						font-size:1.563em;
+						font-weight:bold;
+						text-align:center;
+						margin:0 0 45px;
+					}
+				}
+				
+				#scenario-instruction{
+					p{
+						color:$textcolor2;
+						margin:0 0 22px;
+						font-size:1.375em;
+						line-height:1.182em;
+					}
+				}
+			}
+		}
+		
+	}
+	
+	#footer{
+		background: none repeat scroll 0 0 #205F9F;
+	    bottom: 0;
+	    padding: 0 37px;
+	    position: absolute;
+	    width: 694px;
+	    min-height:152px;
+	    z-index: 605;
+		#controls{
+			height:70px;
+			position:relative;
+			a{font-size:0 !important;}
+			#audio-controls{
+				float:left;
+				padding:17px 0;
+				
+				a{
+
+					height: 36px;
+					width: 48px;
+					display:block;
+					@include background(0, -45px);
+					
+					/*&:hover{
+						@include background(0, -90px);
+					}*/
+					
+					&.off{
+						@include background(0, -90px);
+						/*&:hover{
+							@include background(0, -45px);
+						}*/
+					}
+				}
+			}
+			
+			#navigation{
+				width:215px;
+				top: 20px;
+				left:50%;
+				position:absolute;
+				display:block;
+				color:$textcolor;
+				margin: 0 0 0 -108px;
+				a{	
+					display:block;
+					height:30px;
+					width:20px;
+					
+					&.prev{
+						float:left;
+						@include background(-55px, -45px)
+					}
+					&.next{
+						float:right;
+						@include background(-55px,0)
+					}
+				}
+				
+				span{
+					&.step{
+						float:left;
+						font-size:1.688em;
+						padding:1px 0 2px;
+						text-align:center;
+						width:169px;
+					}
+				}
+				
+				&:after{
+					visibility:hidden;
+					content:".";
+					clear:both;
+				}
+			}
+			
+			#replay-control{
+				float:right;
+				padding:14px 0;
+				
+				a{
+					height:42px;
+					width:42px;
+					display:block;
+					@include background(0, 0)
+				}
+			}
+			
+			&:after{
+				visibility:hidden;
+				content:".";
+				clear:both;
+			}
+			
+		}
+		
+		#instructions{
+			min-height:65px;
+			color:$textcolor;
+			font-size:1.25em;
+			line-height:1.3em;
+			display: table; 
+			width:100%;
+			padding-bottom:7px;
+			p{
+				display: table-cell; 
+ 				vertical-align: top; 
+			}
+		}
+	}
+}
+
+
+
+
+body.iPad{
+	.adjustLeft {
+		margin-left:122px !important;
+	}
+	#smContent {
+		width:100% !important
+	}
+	video {
+		//margin-top: 1px;
+	}
+	#poster {
+		top:-15px !important;
+	}
+	.vidWrap {
+		//top:15px !important;
+	}
+	.mask1 {
+		height:2px;
+	}
+}
+body.tablet {
+	.adjustLeft {
+		left:44.8% !important;
+	}
+	#smContent {
+		width:100% !important
+	}
+	.vidWrap,#poster {
+
+	}
+
+}
+body.iPhone{
+	#smContent {
+		width:100% !important;
+	}
+	.adjustLeft {
+		visibility:hidden;
+	}
+	.vidWrap,#poster {
+
+	}
+	.tocList div {
+
+		a {height:50px !important;font-size:20px !important;
+		display:block !important}
+		width:100% !important;
+	}
+
+
+}
+body.phone{
+	#smContent {
+		width:100% !important;
+	}
+	.vidWrap,#poster {
+	}
+	.adjustLeft {
+		visibility:hidden;
+	}
+	.tocList div {
+
+		a {height:50px !important;font-size:20px !important;
+		display:block !important}
+		width:100% !important;
+	}
+}
+body.desktop {
+
+	.adjustLeft {
+		left:44.5% !important;
+	}
+}

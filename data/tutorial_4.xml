@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Present Value of a Lump Sum (Annual Compounding)">
+	<scenario>
+		<![CDATA[
+			<p>
+            	You are considering an investment opportunity that will pay $15,000 in ten years. If the competitive market interest rate is fixed at 6% per year, what is the investment worth today?
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>10</strong>), and then press the <strong>N</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>6</strong>), and then press the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the future cash flow (in this case <strong>15000</strong>), and then press the <strong>FV</strong> button.</p>
+		]]>
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>PV</strong> button to solve for the present value of the lump sum.</p>
+		]]>
+	</step>
+</tutorial>

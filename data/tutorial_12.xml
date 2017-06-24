@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Net Present Value (NPV) of a Series of Uneven Cash Flows">
+	<scenario>
+		<![CDATA[
+			<p>
+            	Beth is planning to invest $4,000 with a discount rate of 9.75%. She has calculated that her expected cash flows for the next five years will be as shown below. What is the NPV of her investment?
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            <img class="sceneImage" src="app/assets/tutorial_12/scene.png" />
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. Then, press the <strong>CF</strong> button to access the Cash Flow mode.</p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the initial cash outflow (in this case <strong>4000</strong>), and then press the <strong>+/-</strong> button. </p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Press the <strong>ENTER</strong> button to store this as the initial cash investment.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter the first cash inflow amount (in this case <strong>2500</strong>), and then press the <strong>ENTER</strong> button to store this cash flow amount.</p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to record that (in this case) the cash inflow of 2500 occurs only once.</p>
+		]]>
+	</step>
+	<step shift="none" id="6">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter the second cash inflow amount (in this case <strong>1500</strong>), and then press the <strong>ENTER</strong> button to store this cash flow amount.</p>
+		]]>
+	</step>
+	<step shift="none" id="7">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to record that (in this case) the cash inflow of 1500 occurs only once.</p>
+		]]>
+	</step>
+	<step shift="none" id="8">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter the third cash inflow amount (in this case <strong>1000</strong> ), and then press the <strong>ENTER</strong> button to store this cash flow amount.</p>
+		]]>
+	</step>
+	<step shift="none" id="9">
+		<![CDATA[
+			<p>Press <strong>↓</strong>. Then, press <strong>2</strong> followed by the <strong>ENTER</strong> button to record that (in this case) the cash inflow of 1000 occurs twice.</p>
+		]]>
+	</step>
+	<step shift="none" id="10">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter the fourth cash inflow amount (in this case <strong>800</strong>), and then press the <strong>ENTER</strong> button to store this cash flow amount.</p>
+		]]>
+	</step>
+	<step shift="none" id="11">
+		<![CDATA[
+			<p>Enter the discount rate (in this case <strong>9.75</strong>), and then press the <strong>I/Y</strong> button.</p>
+		]]>
+	</step>
+	<step shift="none" id="12">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>NPV</strong> button to calculate the net present value of the investment.</p>
+		]]>
+	</step>
+</tutorial>

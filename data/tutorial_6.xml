@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Present Value of an Annuity">
+	<scenario>
+		<![CDATA[
+			<p>
+            	How much should you invest now so that starting one year from today your daughter can receive $6,000 per year for the next five years? Assume the discount rate is 15%.
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the periodic payment (in this case <strong>6000</strong>), and then press the <strong>PMT</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>15</strong>), and then press the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>5</strong>), and then press the <strong>N</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>PV</strong> button to solve for the present value of the annuity. </p>
+		]]>
+	</step>
+</tutorial>

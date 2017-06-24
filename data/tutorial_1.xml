@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Learning the General TVM Buttons">
+	<scenario>
+		<![CDATA[
+			<p>
+            	These are the general buttons you will use to calculate a Time Value of Money equation. Remember, to enter a known value you will need to enter the numerical value first and then press the appropriate button.
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Press the <strong>N</strong> button to set the number of periods/payments.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Press the <strong>I/Y</strong> button to set the periodic interest rate.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Press the <strong>PV</strong> button to set the starting balance, initial investment or present value.</p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>PMT</strong> button to set the payment or annuity amount. </p>
+		]]>
+	</step>
+	<step shift="none" id="6">
+		<![CDATA[
+			<p>Press the <strong>FV</strong> button to set the ending balance or future value. </p>
+		]]>
+	</step>
+	<step shift="none" id="7">
+		<![CDATA[
+			<p>Press the <strong>P/Y</strong> button to set the number of payments per year.</p>
+		]]>
+	</step>
+	<step shift="none" id="8">
+		<![CDATA[
+			<p>Press the <strong>BGN</strong> button to change the payments to beginning-of-period mode (red). Press this button again to return to the end-of-period mode (black).</p>
+		]]>
+	</step>
+	<step shift="none" id="9">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button followed by the appropriate TVM button to solve for an unknown value.</p>
+		]]>
+	</step>
+</tutorial>

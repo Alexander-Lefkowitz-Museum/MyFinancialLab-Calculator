@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Loan Payments&lt;br /&gt;(Monthly Compounding)">
+	<scenario>
+		<![CDATA[
+			<p>
+            	If you finance the purchase of a new desk and chair for $525 at 15% APR compounded monthly for two years, how much is the monthly payment?
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>24</strong>, since the purchase is financed for two years), and then press the <strong>N</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>15/12</strong>, since the APR is compounded monthly), and then press the <strong class="bolder">=</strong> button followed by the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the loan amount (in this case <strong>525</strong>), and then press the PV button. </p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>PMT</strong> button to solve for the monthly loan payment. </p>
+		]]>
+	</step>
+</tutorial>

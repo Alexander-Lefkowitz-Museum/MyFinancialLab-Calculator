@@ -1,0 +1,494 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Verdana, sans-serif; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+b {
+  font-weight: bold; }
+
+.clear {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  clear: both; }
+
+[onclick] {
+  cursor: pointer; }
+
+.forceHide {
+  display: none !important; }
+
+strong {
+  font-weight: bold !important; }
+
+.noTop {
+  bottom: 0 !important; }
+
+video {
+  height: 100%; }
+
+.bolder {
+  font-size: larger;
+  line-height: 15px; }
+
+body {
+  min-height: 722px !important; }
+
+#landscapeMode {
+  background-color: black;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1000; }
+  #landscapeMode div {
+    color: white;
+    display: inline-block;
+    font-size: 32px;
+    margin: 100px auto 0; }
+
+#tapToContinue, #continueToPartB {
+  display: none;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer; }
+  #tapToContinue h2, #continueToPartB h2 {
+    font-size: 22px;
+    font-weight: bold; }
+  #tapToContinue h2 > span, #continueToPartB h2 > span {
+    background: url("../ui/ui-buttons.png") no-repeat scroll -81px 0 transparent;
+    display: inline-block;
+    height: 32px;
+    width: 22px;
+    vertical-align: middle; }
+
+#continueToPartB {
+  display: block; }
+
+#container {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 768px;
+  min-height: 722px;
+  min-width: 768px;
+  overflow: hidden;
+  position: relative; }
+  #container #header {
+    background: #354293;
+    height: 85px;
+    display: table;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000; }
+    #container #header #calc-button {
+      padding: 16px 18px;
+      border-right: 1px solid #9ba2cb;
+      float: left;
+      display: inline-block; }
+      #container #header #calc-button a {
+        height: 53px;
+        width: 53px;
+        display: block;
+        background: url(../ui/ui-buttons.png) no-repeat 0 -135px; }
+    #container #header #calc-title {
+      float: left;
+      margin-top: 18px;
+      display: table-cell;
+      position: relative;
+      vertical-align: middle;
+      			/*&:after{
+      				content:"...";
+      				margin:0 0 0;
+      				padding:0;
+      				font-size:1.563em;
+      				font-weight:bold;
+      				color:$textcolor;
+      				position:absolute;
+      				top: 28px;
+             			right: 110px; 
+      			}*/ }
+      #container #header #calc-title h1 {
+        font-weight: bold;
+        color: white;
+        width: 485px;
+        margin: 0px 50px;
+        font-size: 1.563em;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: top; }
+    #container #header #calc-listing-button {
+      display: inline-block;
+      padding: 20px 8px;
+      font-size: 0; }
+      #container #header #calc-listing-button a {
+        font-size: 0;
+        height: 45px;
+        width: 54px;
+        display: block;
+        background: url(../ui/ui-buttons.png) no-repeat -55px -135px; }
+    #container #header:after {
+      visibility: hidden;
+      content: ".";
+      clear: both; }
+  #container #content-container {
+    background: #fbf5ea;
+    bottom: 152px;
+    overflow: hidden;
+    position: absolute;
+    top: 86px;
+    width: 100%;
+    z-index: 609; }
+    #container #content-container .sceneImage {
+      margin: -10px 0 0 -24px; }
+    #container #content-container .tocList {
+      max-height: auto !important; }
+      #container #content-container .tocList a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 5px 0 18px 0;
+        display: inline-block;
+        height: 37px; }
+      #container #content-container .tocList a > span {
+        display: block;
+        font-weight: normal;
+        font-size: smaller; }
+      #container #content-container .tocList a:hover {
+        color: #444; }
+    #container #content-container .slideScroll {
+      background-color: #E6E5E6;
+      border-radius: 7px 7px 7px 7px;
+      bottom: 10px;
+      left: -24px;
+      position: absolute;
+      top: 10px;
+      width: 12px;
+      z-index: 607; }
+      #container #content-container .slideScroll #slideScrollBar {
+        background-color: #444444;
+        border-radius: 7px 7px 7px 7px;
+        height: 50px;
+        left: 25%;
+        margin: 6px 0;
+        padding: 10px 0;
+        position: relative;
+        top: 0;
+        width: 50%; }
+      #container #content-container .slideScroll #menuToggle {
+        background-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        right: -68px;
+        top: 49%;
+        z-index: 608;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 25px 25px 25px 8px; }
+        #container #content-container .slideScroll #menuToggle div {
+          background-image: url("../ui/menuTog.png");
+          height: 29px;
+          width: 34px;
+          font-size: 0; }
+    #container #content-container #slideMenu {
+      background-color: #444444;
+      box-shadow: 2px 0 4px black;
+      color: #E5E5E5;
+      overflow: hidden;
+      width: 0%;
+      z-index: 600;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0; }
+      #container #content-container #slideMenu p {
+        line-height: 19px;
+        margin: 0 40px 30px 12px;
+        font-size: 18px; }
+      #container #content-container #slideMenu h2 {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 9px 93px 4px 12px; }
+      #container #content-container #slideMenu #smContent {
+        height: 100%;
+        overflow-y: scroll;
+        padding-right: 28px;
+        width: 100%;
+        display: none; }
+        #container #content-container #slideMenu #smContent ol, #container #content-container #slideMenu #smContent ul {
+          padding: 0 40px;
+          margin: -18px 18px 0 12px;
+          font-size: 18px !important;
+          line-height: 19px !important; }
+        #container #content-container #slideMenu #smContent ol > li {
+          list-style: decimal outside none; }
+        #container #content-container #slideMenu #smContent ul > li {
+          list-style: disc outside none; }
+    #container #content-container.step #content {
+      overflow: hidden;
+      height: 100%;
+      margin: 20px auto;
+      padding: 0;
+      text-align: center; }
+      #container #content-container.step #content.shiftContent {
+        text-align: right;
+        margin-right: 20px; }
+        #container #content-container.step #content.shiftContent .vidWrap {
+          text-align: right; }
+      #container #content-container.step #content .vidWrap, #container #content-container.step #content #poster {
+        height: 90%;
+        border: none;
+        max-height: 670px; }
+      #container #content-container.step #content #poster {
+        z-index: 510;
+        top: -14px;
+        position: relative;
+        border-top: 2px solid #FBF5EA !important;
+        margin: -90% 0 0 0 !important;
+        max-width: 100%;
+        width: auto; }
+      #container #content-container.step #content .vidWrap {
+        margin: 10px auto 0;
+        position: relative; }
+        #container #content-container.step #content .vidWrap .mask1 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: #FBF5EA;
+          top: -1px; }
+        #container #content-container.step #content .vidWrap .mask2 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: #FBF5EA;
+          bottom: -1px; }
+        #container #content-container.step #content .vidWrap .mask3 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 2px;
+          background-color: #FBF5EA;
+          top: -1px;
+          bottom: -1px; }
+        #container #content-container.step #content .vidWrap .mask4 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 2px;
+          background-color: #FBF5EA;
+          top: -1px;
+          bottom: -1px; }
+    #container #content-container.scenario {
+      padding: 32px 0; }
+      #container #content-container.scenario ol, #container #content-container.scenario ul {
+        padding: 0 40px; }
+      #container #content-container.scenario #scenario-instruction ol li {
+        list-style: decimal outside none;
+        color: #575757;
+        font-size: 1.375em; }
+      #container #content-container.scenario #scenario-instruction ul li {
+        list-style: disc outside none;
+        color: #575757;
+        font-size: 1.375em; }
+      #container #content-container.scenario #poster {
+        display: none !important; }
+      #container #content-container.scenario .tocList {
+        width: 590px;
+        margin: 0 auto;
+        border: 2px solid #bdb9b2;
+        background: #fff;
+        padding: 45px; }
+        #container #content-container.scenario .tocList div {
+          display: inline-block;
+          vertical-align: top;
+          width: 49%; }
+      #container #content-container.scenario #content {
+        border: 2px solid #BDB9B2;
+        bottom: 30px;
+        margin: 0 40px;
+        min-height: 200px;
+        padding: 45px;
+        position: absolute;
+        top: 30px;
+        width: 78%; }
+        #container #content-container.scenario #content #audio {
+          display: none; }
+        #container #content-container.scenario #content audio {
+          display: none !important; }
+        #container #content-container.scenario #content #scenario-title h2 {
+          color: #575757;
+          font-size: 1.563em;
+          font-weight: bold;
+          text-align: center;
+          margin: 0 0 45px; }
+        #container #content-container.scenario #content #scenario-instruction p {
+          color: #575757;
+          margin: 0 0 22px;
+          font-size: 1.375em;
+          line-height: 1.182em; }
+  #container #footer {
+    background: none repeat scroll 0 0 #205F9F;
+    bottom: 0;
+    padding: 0 37px;
+    position: absolute;
+    width: 694px;
+    min-height: 152px;
+    z-index: 605; }
+    #container #footer #controls {
+      height: 70px;
+      position: relative; }
+      #container #footer #controls a {
+        font-size: 0 !important; }
+      #container #footer #controls #audio-controls {
+        float: left;
+        padding: 17px 0; }
+        #container #footer #controls #audio-controls a {
+          height: 36px;
+          width: 48px;
+          display: block;
+          background: url(../ui/ui-buttons.png) no-repeat 0 -45px;
+          /*&:hover{
+          	@include background(0, -90px);
+          }*/ }
+          #container #footer #controls #audio-controls a.off {
+            background: url(../ui/ui-buttons.png) no-repeat 0 -90px;
+            /*&:hover{
+            	@include background(0, -45px);
+            }*/ }
+      #container #footer #controls #navigation {
+        width: 215px;
+        top: 20px;
+        left: 50%;
+        position: absolute;
+        display: block;
+        color: white;
+        margin: 0 0 0 -108px; }
+        #container #footer #controls #navigation a {
+          display: block;
+          height: 30px;
+          width: 20px; }
+          #container #footer #controls #navigation a.prev {
+            float: left;
+            background: url(../ui/ui-buttons.png) no-repeat -55px -45px; }
+          #container #footer #controls #navigation a.next {
+            float: right;
+            background: url(../ui/ui-buttons.png) no-repeat -55px 0; }
+        #container #footer #controls #navigation span.step {
+          float: left;
+          font-size: 1.688em;
+          padding: 1px 0 2px;
+          text-align: center;
+          width: 169px; }
+        #container #footer #controls #navigation:after {
+          visibility: hidden;
+          content: ".";
+          clear: both; }
+      #container #footer #controls #replay-control {
+        float: right;
+        padding: 14px 0; }
+        #container #footer #controls #replay-control a {
+          height: 42px;
+          width: 42px;
+          display: block;
+          background: url(../ui/ui-buttons.png) no-repeat 0 0; }
+      #container #footer #controls:after {
+        visibility: hidden;
+        content: ".";
+        clear: both; }
+    #container #footer #instructions {
+      min-height: 65px;
+      color: white;
+      font-size: 1.25em;
+      line-height: 1.3em;
+      display: table;
+      width: 100%;
+      padding-bottom: 7px; }
+      #container #footer #instructions p {
+        display: table-cell;
+        vertical-align: top; }
+
+body.iPad .adjustLeft {
+  margin-left: 122px !important; }
+body.iPad #smContent {
+  width: 100% !important; }
+body.iPad #poster {
+  top: -15px !important; }
+body.iPad .mask1 {
+  height: 2px; }
+
+body.tablet .adjustLeft {
+  left: 44.8% !important; }
+body.tablet #smContent {
+  width: 100% !important; }
+
+body.iPhone #smContent {
+  width: 100% !important; }
+body.iPhone .adjustLeft {
+  visibility: hidden; }
+body.iPhone .tocList div {
+  width: 100% !important; }
+  body.iPhone .tocList div a {
+    height: 50px !important;
+    font-size: 20px !important;
+    display: block !important; }
+
+body.phone #smContent {
+  width: 100% !important; }
+body.phone .adjustLeft {
+  visibility: hidden; }
+body.phone .tocList div {
+  width: 100% !important; }
+  body.phone .tocList div a {
+    height: 50px !important;
+    font-size: 20px !important;
+    display: block !important; }
+
+body.desktop .adjustLeft {
+  left: 44.5% !important; }

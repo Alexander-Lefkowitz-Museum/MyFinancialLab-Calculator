@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Mortgage Payments and Amortization Schedule">
+	<scenario>
+		<![CDATA[
+			<p>
+            	This tutorial shows how to use the Time Value of Money and Amortization modes to:
+				<ol>
+					<li>Calculate the monthly payments on a 30-year loan starting in May.</li>
+					<li>Generate an amortization schedule for the first three years of the loan.</li>
+				</ol>
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<part>
+		<![CDATA[
+			<p><strong>Part 1.</strong> Calculate the monthly payment with a loan amount of $150,000 and 7% APR.</p>
+		]]>	
+	</part>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries.</p>
+		]]>		
+	</step>	
+	<step shift="none" id="2" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>360</strong>, since the loan is for 30 years), and then press the <strong>N</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="3" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>7/12</strong>, since payments are made on a monthly basis), and then press the <strong class="bolder">=</strong> button followed by the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4">
+		<![CDATA[
+			<p>Enter the loan amount (in this case <strong>150000</strong>), and then press the <strong>PV</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>PMT</strong> button to solve for the monthly payment. </p>
+		]]>
+	</step>
+
+	<part step="6">
+		<![CDATA[
+			<p><strong>Part 2.</strong> Generate an amortization schedule for the first three years of the loan. If the first payment is in May, the first year has eight payment periods and the following years have twelve payment periods each.</p>
+		]]>	
+	</part>
+
+
+	<step shift="none" id="6">
+		<![CDATA[
+			<p>Press the <strong>AMORT</strong> button to access the amortization worksheet.</p>
+		]]>		
+	</step>	
+	<step shift="none" id="7" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter 8 (since the first year has eight payment periods), and then press the <strong>ENTER</strong> button to set the ending period to 8.</p>
+		]]>		
+	</step>
+	<step shift="none" id="8" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the balance at the end of the first year (after 8 payments).</p>
+		]]>		
+	</step>
+	<step shift="none" id="9">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the principal paid during the first year.</p>
+		]]>		
+	</step>
+	<step shift="none" id="10">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the interest paid during the first year.</p>
+		]]>
+	</step>
+	<step shift="none" id="11">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter <strong>9</strong> (since this is the beginning of the second year), and then press the <strong>ENTER</strong> button to change the beginning period to 9.</p>
+		]]>
+	</step>
+	<step shift="none" id="12">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter <strong>20</strong> (since the second year ends after 20 periods), and then press the <strong>ENTER</strong> button to change the ending period to 20.</p>
+		]]>
+	</step>
+	<step shift="none" id="13">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the balance at the end of the second year (after 20 payments).</p>
+		]]>
+	</step>
+	<step shift="none" id="14">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the principal paid during the second year.</p>
+		]]>
+	</step>
+	<step shift="none" id="15">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the interest paid during the second year.</p>
+		]]>
+	</step>
+	<step shift="none" id="16">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter <strong>21</strong> (since this is the beginning of the third year), and then press the <strong>ENTER</strong> button to change the beginning period to 21.</p>
+		]]>
+	</step>
+	<step shift="none" id="17">
+		<![CDATA[
+			<p>Press <strong>↓</strong>, enter <strong>32</strong> (since the third year ends after 32 periods), and then press the <strong>ENTER</strong> button to change the ending period to 32.</p>
+		]]>
+	</step>
+	<step shift="none" id="18">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the balance at the end of the third year (after 32 payments).</p>
+		]]>
+	</step>
+	<step shift="none" id="19">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the principal paid during the third year.</p>
+		]]>
+	</step>
+	<step shift="none" id="20">
+		<![CDATA[
+			<p>Press <strong>↓</strong> to display the interest paid during the third year.</p>
+		]]>
+	</step>
+</tutorial>

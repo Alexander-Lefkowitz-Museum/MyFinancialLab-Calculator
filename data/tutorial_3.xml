@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tutorial title="Future Value of an Annuity">
+	<scenario>
+		<![CDATA[
+			<p>
+            	Ellen is 35 years old, and she has decided it is time to plan seriously for her retirement. At the end of each year until she is 65 years old she will save $10,000 in a retirement account. If the account earns 10% per year, how much will Ellen have saved at age 65?
+            </p>
+            	<div id="tapToContinue"  tabindex="7">
+		            <h2>Play
+		            <span> </span></h2>
+		        </div>
+            
+		]]>
+	</scenario>
+	<step shift="none" id="1">
+		<![CDATA[
+			<p>Press the <strong>RESET</strong> button to clear all the previous entries. </p>
+		]]>		
+	</step>	
+	<step shift="none" id="2">
+		<![CDATA[
+			<p>Enter the number of periods (in this case <strong>30</strong>), and then press the <strong>N</strong> button.</p>
+		]]>		
+	</step>	
+	<step shift="none" id="3" animation="6" start="3.75" speed="700">
+		<![CDATA[
+			<p>Enter the periodic interest rate (in this case <strong>10</strong>), and then press the <strong>I/Y</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="4" animation="3" start="6" speed="700">
+		<![CDATA[
+			<p>Enter the annuity amount per period (in this case <strong>10000</strong>), and then press the <strong>PMT</strong> button.</p>
+		]]>		
+	</step>
+	<step shift="none" id="5">
+		<![CDATA[
+			<p>Press the <strong>CPT</strong> button and then the <strong>FV</strong> button to solve for the future value of the annuity.</p>
+		]]>		
+	</step>
+</tutorial>
